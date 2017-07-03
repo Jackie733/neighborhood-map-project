@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Neighborhood map project</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="options-box">
+            <h1>北京景点</h1>
+            <hr>
+            <div>
+                <span class="text">搜索</span>
+                <input type="search" id="places-search" placeholder="例：天安门" data-bind="value: locationInput,valueUpdate:'keyup'">
+                <ul data-bind="foreach:listFilter" style="list-style: none">
+                    <li data-bind="text:name,click:$parent.locationClicked"></li>
+                </ul>
+            </div>
+            
+            
+        </div>
+        <div id="map"></div>
+    </div>
+
+
+    <script src="js/knockout.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAOJMAPI3ZDYsGNsOSnLKBUeZj2lN9Qy0o&v=3&callback=initMap">
+    </script>
+</body>
+</html>
