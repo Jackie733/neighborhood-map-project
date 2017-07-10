@@ -1,29 +1,12 @@
-# Neighborhood Map 
-    App with Google Maps API 
-    Javascript, Knockout, Jquery
-    
-# DOCUMENTATION
-    Full documentation viewable at 
-    https://github.com/CHBaker/Neighborhood-map
-    
-# INSTALLATION
-    1] Download or clone full GitHub repo
-    2] Open html in browser, or local host
-    
-# CONFIGURATION
-    N/A
-       
-# OPERATING INSTRUCTIONS
-    This app is easy to use, click locations, filter places,
-    look at wiki articles.
-    
-# FILE MANIFEST
-    Index.html
+# 街区地图项目
 
-    js/libs/knockout-3.2.0.js
+- 该项目显示北京部分景点（用到Google地图API）
 
-    js/map.js
-      /script.js
+  - 左边栏为搜索过滤框和景点列表
+  - 右边显示北京市地图及标记景点
 
-    static/add.svg
-          /main.css
+- 通过在搜索框输入景点中文名称可以过滤出某一个景点以供选择
+
+- 点击景点列表或者标记会弹出相应景点的信息窗口，显示维基连接（wiki API），点击会跳转到该景点维基百科界面
+
+  ​

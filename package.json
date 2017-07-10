@@ -1,0 +1,23 @@
+{
+  "name": "neighborhood-map-project",
+  "version": "1.0.0",
+  "description": "project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jackie733/neighborhood-map-project.git"
+  },
+  "author": "Jackie Tsien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jackie733/neighborhood-map-project/issues"
+  },
+  "homepage": "https://github.com/Jackie733/neighborhood-map-project#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0"
+  }
+}

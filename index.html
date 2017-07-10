@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Neighborhood map project</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="options-box">
-            <h1>北京景点</h1>
+    
+    <div class="container" data-bind="fadeVisible: sideBarDisplay">
+        <div class="options-box" id="sidebar">
+            <h1>北京景点</h1>                                            
             <hr>
             <div>
                 <span class="text">搜索</span>
@@ -21,12 +23,18 @@
             
             
         </div>
-        <div id="map"></div>
+        
     </div>
+    <div id="closebar">
+                <span class="glyphicon glyphicon-th-list" data-bind="click: sideBarDisplay">搜索</span> 
+            </div>
+    <div id="map"></div>
+    
 
-
+    
     <script src="js/knockout.js"></script>
     <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAOJMAPI3ZDYsGNsOSnLKBUeZj2lN9Qy0o&v=3&callback=initMap">
