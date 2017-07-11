@@ -45,38 +45,6 @@ function initMap() {
     ko.applyBindings(new ViewModel());
 }
 
-//定义侧边栏动作
-// (function() {
-//     var Sidebar = function(eId,closeBarId) {
-//         var self = this;
-//         this.state = 'opened';
-//         this.el = document.getElementById(eId || 'sidebar');
-//         this.closeBarEl = document.getElementById(closeBarId || 'closebar');
-//         this.el.addEventListener('click',function(event) {
-//             if (event.target !== self.el) {
-//                 self.triggerSwitch()
-//             }
-//         });
-//     };
-//     Sidebar.prototype.close = function() {
-//         console.log('close');
-//         this.el.className = 'sidebar-move-left';
-//         this.closeBarEl.className = 'closeBar-move-right';
-//         this.state = 'closed';
-//     };
-//     Sidebar.prototype.open = function() {
-//         console.log('open')
-//         this.state = 'opened';
-//     };
-//     Sidebar.prototype.triggerSwitch = function() {
-//         if (this.state === 'opened') {
-//             this.close();
-//         }else {
-//             this.open();
-//         }
-//     };  
-//     var sidebar = new Sidebar();
-// })();
 
 //位置对象构造函数
 var Places = function(data) {
@@ -141,7 +109,7 @@ var ViewModel = function() {
         google.maps.event.trigger(location.marker,'click');
     };
 
-    //sidebar display
+    //搜索窗
     this.sideBarDisplay = ko.observable(false);
 
 
@@ -173,13 +141,10 @@ var ViewModel = function() {
                 
             
         }
-    }
-
-    
-
-    
+    }   
 };
 
+//过滤窗口淡入淡出
 ko.bindingHandlers.fadeVisible = {
     init: function(element,valueAccessor) {
         var value = valueAccessor();
