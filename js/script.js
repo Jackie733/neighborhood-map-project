@@ -135,7 +135,11 @@ var ViewModel = function() {
                     var articleList = response[3];
                     var articleStr = articleList[0];
                     infowindow.setContent('<a href= "' + articleStr +'">' + "Wikipedia-" + marker.title + '</a>')
-                    
+
+                },
+                error: function(XHR,textStatus,errorThrown) {
+                    alert("error: " + textStatus);
+                    alert("error: " + errorThrown);
                 }
             });
                 
@@ -157,7 +161,6 @@ ko.bindingHandlers.fadeVisible = {
 };
 
 //Google地图错误显示
-function googlemapError() {
-    alert("Google Maps failed to load.");
-    this.mapError('Google Maps failed to load.');
-}
+mapError = function() {
+            alert("Google Maps failed to load.");
+        };
